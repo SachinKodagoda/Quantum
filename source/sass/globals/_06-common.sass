@@ -1,0 +1,49 @@
+.wrapper
+    max-width: $xxxlarge-min
+    margin: 0 auto
+    top: 20px
+    left: 50px
+    width: calc(100% - $toolbar-width)
+    background-color: #969FA5
+
+.card
+    min-height: 100vh
+    width: 95%
+    margin: 16px auto
+    padding: 16px
+    // background: #fff
+    background-color: rgba(255,255,255,.05)
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+    border-radius: 5px
+    +LARGE
+        width: 80%
+
+.draggable
+    touch-action: none
+    user-select: none
+    width: 50px
+    height: 50px
+
+#drag-1
+    width: 25%
+    min-height: 6.5em
+    margin: 10%
+    background-color: #29e
+    color: white
+    border-radius: 0.75em
+    padding: 4%
+    touch-action: none
+    user-select: none
+    transform: translate(0px, 0px)
+
+.deviceBar
+    position: fixed
+    top: 0
+    left: 50px
+    // background-color: #303030
+    background-color: #212527
+    box-shadow: inset -1px 0 1px 0 rgba(0,0,0,.5)
+    border-bottom: 1px solid #000
+    height: 20px
+    z-index: 10
+    width: 100%

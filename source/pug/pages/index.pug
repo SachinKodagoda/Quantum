@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+  head
+    include ../globals/head.pug
+  body
+
+    .wrapper
+      .card
+        #drag-1.draggable
+          | Sachin
+    .deviceBar
+    .toolbar
+      .toolbar_item
+        .toolbar_item_icon.box
+      .toolbar_item
+        .toolbar_item_icon.roundedCornerBox
+      .toolbar_item
+        .toolbar_item_icon.circle
+      .toolbar_item
+        include ../svg/text.pug
+      .toolbar_item
+        include ../svg/page.pug
+    .rightPannel
+      .rightPannel_item
+        | Dimensions
+
+    //- css
+    script(src='assets/js/interact.min.js')
+    script(src='assets/js/actions.js')
+    script(src='assets/js/app.js')

@@ -1,0 +1,44 @@
+.toolbar
+    height: 100vh
+    width: $toolbar-width
+    position: fixed
+    left: 0
+    top: 0
+    box-shadow: inset -1px 0 1px 0 rgba(0,0,0,.5)
+    border-right: 1px solid #000
+    background-color: #212527
+    display: flex
+    flex-direction: column
+    &_item
+        width: 100%
+        height: $toolbar-width
+        cursor: pointer
+        +flex_center
+        &:hover
+            position: relative
+            text-shadow: 0 0 15px rgba(0,197,255,.4)
+            background: #33393c
+        &_icon
+            position: absolute
+            z-index: 2
+
+.box
+    background: #969FA5
+    width: 20px
+    height: 20px
+.roundedCornerBox
+    background: #969FA5
+    width: 20px
+    height: 20px
+    border-radius: 6px
+.circle
+    background: #969FA5
+    width: 20px
+    height: 20px
+    border-radius: 20px / 20px
+.textEdit
+    width: 20px
+    height: 20px
+.pageEdit
+    width: 20px
+    height: 20px
