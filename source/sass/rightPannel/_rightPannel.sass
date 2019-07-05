@@ -1,20 +1,178 @@
 .rightPannel
     position: fixed
     right: 0
-    top: 20px
-    background-color: #1E2123
+    top: 0
     width: 200px
     height: 100vh
-    &_item
+    z-index: 10
+    background-color: $mainRightPanel
+    color: $mainRightPanel-Font
+    border-left: $RightPanel-CommonBorder
+    &_topic
         font-family: 'Roboto'
-        font-weight: 400
-        color: #fff
+        font-weight: 300
+        font-size: 15px
         width: 100%
-        cursor: pointer
         width: 100%
-        padding: .5rem 0
-        border-bottom: 1px solid #000
+        padding: .1rem 0
+        border-bottom: $RightPanel-CommonBorder
         text-align: center
-        background: linear-gradient(#212527,#1c1f21)
-        box-shadow: inset 0 1px 0 0 hsla(0,0%,100%,.035), 0 -1px 2px 0 rgba(0,0,0,.12), 0 1px 0 0 hsla(0,0%,100%,.035)
+        background: $mainRightPanel-Topic
+        box-shadow: $mainRightPanel-Topic-box-shadow
         +flex_center
+        +noAction
+        +noSelect
+    &_page
+        width: 130px
+        height: 140px
+        border-radius: 4px
+        display: block
+        margin: 1rem auto
+        background: #383f43
+        border: 1px solid $mainRightPanel-Border
+        border-bottom-width: 2px
+        opacity: .5
+        color: #bebebe
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+        display: flex
+        flex-direction: column
+        &_inner
+            flex-grow: 1
+            // border: 2px solid #ccc
+            box-shadow: 0 1px 0 0 hsla(0,0%,100%,.05), inset 0 1px 0 0 hsla(0,0%,100%,.05)
+            border-width: 1px
+            border-style: solid
+            border-color: #1d1e20 #111213 #0c0c0d
+            border-radius: 3px
+            background: #969FA5
+            margin: 10px
+        &_description
+            height: 30px
+            width: 100%
+            background-color: #212527
+        &_pageTypeNo
+            font-family: 'Rajdhani'
+            font-weight: 900
+            margin-left: 10px
+            font-size: 12px
+            color: #fff
+    &_devices
+        margin: 10px
+        display: flex
+        justify-content: space-between
+        &_item
+            background: linear-gradient(#434b50,#373e42)
+            box-shadow: 0 1px 0 0 hsla(0,0%,100%,.05), inset 0 1px 0 0 hsla(0,0%,100%,.05)
+            border-width: 1px
+            border-style: solid
+            border-color: #1d1e20 #111213 #0c0c0d
+            border-radius: 3px
+            display: inline-block
+            padding: 10px
+            cursor: pointer
+            +flex_center
+            &:active
+                box-shadow: 0 1px 0 0 hsla(0,0%,100%,.08), inset 0 1px 1px 0 rgba(0,0,0,.2)
+                background: #3c4044
+
+
+.check_container
+    display: inline-block
+    float: right
+    margin-right: 10px
+    margin-top: 4px
+.rightPannel_mainTopic
+    margin: 10px 0
+    font-weight: 600
+    line-height: 20px
+    text-align: center
+    text-transform: uppercase
+    +noAction
+    +noSelect
+
+.responsive_device
+    width: 20px
+    height: 20px
+
+.accordion
+    transition: 0.4s
+// .active, .accordion:hover
+//     background-color: #ccc
+
+.accordion:after
+    content: '\002B'
+    color: #777
+    font-weight: bold
+    float: right
+    margin-left: 5px
+    position: absolute
+    right: 10px
+
+.accordion.active:after
+    content: "\2212"
+
+.panel
+    max-height: 0
+    overflow: hidden
+    transition: max-height 0.2s ease-out
+
+.bottom_sp_border
+    border-bottom: $RightPanel-CommonBorder
+
+.top_sp_border
+    border-top: $RightPanel-CommonBorder
+.switch
+    +flex_center
+.cmn-toggle
+    position: absolute
+    margin-left: -9999px
+    visibility: hidden
+.cmn-toggle + label
+    display: block
+    position: relative
+    cursor: pointer
+    outline: none
+    user-select: none
+input.cmn-toggle-round + label
+    padding: 2px
+    width: 40px
+    height: 20px
+    background-color: #859197
+    border-radius: 50px
+
+input.cmn-toggle-round + label:before,
+input.cmn-toggle-round + label:after
+    display: block
+    position: absolute
+    top: 1px
+    left: 1px
+    bottom: 1px
+    content: ""
+input.cmn-toggle-round + label:before
+    right: 1px
+    background-color: #859197
+    border-radius: 60px
+    transition: background 0.4s
+input.cmn-toggle-round + label:after
+    width: 18px
+    background-color: #fff
+    border-radius: 100%
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+    transition: margin 0.4s
+input.cmn-toggle-round:checked + label:before
+    background-color: #859197
+input.cmn-toggle-round:checked + label:after
+    margin-left: 20px
+
+.box_center
+    display: flex
+    justify-content: space-around
+    padding: 20px
+
+.horizontalPhone
+    width: 30px
+    height: 30px
+
+.verticalPhone
+    width: auto
+    height: 30px

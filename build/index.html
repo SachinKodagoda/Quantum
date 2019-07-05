@@ -11,20 +11,21 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
     <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" sizes="16x16">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,900">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,900&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani&amp;display=swap">
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
     <div class="wrapper">
       <div class="card">
-        <div class="draggable" id="drag-1">Sachin</div>
+        <div class="resize-drag" data-x="0" data-y="0">Dammed</div>
       </div>
     </div>
-    <div class="deviceBar"></div>
-    <div class="toolbar">
+    <div class="toolbar tooltip">
       <div class="toolbar_item">
         <div class="toolbar_item_icon box"></div>
       </div>
@@ -34,15 +35,16 @@
       <div class="toolbar_item">
         <div class="toolbar_item_icon circle"></div>
       </div>
-      <div class="toolbar_item">
+      <div class="toolbar_item tooltip">
         <!-- ?xml version="1.0"?-->
         <svg class="toolbar_item_icon textEdit" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 214 214" style="enable-background:new 0 0 214 214;" xml:space="preserve" width="512px" height="512px">
           <g>
             <path class="active-path" d="M186.943,181L124.345,0H92.596L29.415,181H15v33h63v-33H67.775l10.688-32h59.026l10.39,32H137v33h62v-33H186.943z   M127.579,118H88.404l19.981-68.271L127.579,118z" fill="#969FA5"></path>
           </g>
         </svg>
+        <div class="tooltiptext">Page&nbsp;Settings</div>
       </div>
-      <div class="toolbar_item">
+      <div class="toolbar_item tooltip">
         <!-- ?xml version="1.0"?-->
         <svg class="toolbar_item_icon pageEdit" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 512 512" height="512px" viewBox="0 0 512 512" width="512px">
           <g>
@@ -51,12 +53,109 @@
             <path class="active-path" d="m325.022 282.499c-1.613-6.053-4.025-11.87-7.171-17.296-3.009-5.194-3.522-11.289-1.747-16.734l-7.611-7.61c-5.447 1.775-11.542 1.261-16.731-1.747-5.429-3.146-11.247-5.559-17.295-7.172-5.803-1.548-10.48-5.493-13.079-10.596h-10.775c-2.599 5.103-7.276 9.048-13.079 10.596-6.048 1.613-11.866 4.026-17.295 7.172-5.19 3.009-11.284 3.523-16.731 1.747l-7.61 7.61c1.775 5.445 1.262 11.538-1.745 16.729-3.148 5.431-5.561 11.248-7.173 17.297-1.55 5.804-5.494 10.48-10.597 13.079v10.776c5.103 2.599 9.048 7.275 10.596 13.077 1.612 6.05 4.025 11.868 7.172 17.296 3.008 5.192 3.522 11.287 1.747 16.732l7.61 7.611c5.447-1.778 11.543-1.263 16.733 1.747 5.427 3.146 11.245 5.559 17.292 7.17 5.804 1.55 10.48 5.494 13.079 10.597h10.776c2.599-5.102 7.275-9.047 13.076-10.596 6.051-1.612 11.869-4.025 17.297-7.172 5.19-3.009 11.284-3.525 16.733-1.747l7.609-7.61c-1.775-5.444-1.262-11.539 1.745-16.729 3.148-5.431 5.562-11.249 7.173-17.296 1.549-5.804 5.494-10.48 10.597-13.08v-10.776c-5.101-2.598-9.047-7.274-10.596-13.075zm-69.022 45.981c-15.197 0-27.517-12.32-27.517-27.517 0-15.198 12.32-27.517 27.517-27.517s27.518 12.32 27.518 27.517-12.321 27.517-27.518 27.517z" fill="#969FA5"></path>
           </g>
         </svg>
+        <div class="tooltiptext">Page&nbsp;Settings</div>
       </div>
     </div>
     <div class="rightPannel">
-      <div class="rightPannel_item">Dimensions</div>
+      <div class="rightPannel_mainTopic">Page Settings</div>
+      <div class="rightPannel_topic accordion top_sp_border">Page Setup</div>
+      <div class="panel">
+        <div class="owl-carousel owl-theme bottom_sp_border">
+          <div class="item rightPannel_page">
+            <div class="rightPannel_page_inner"></div>
+            <div class="rightPannel_page_description"><span class="rightPannel_page_pageTypeNo">1 of 3</span>
+              <div class="check_container">
+                <input type="checkbox" checked="checked"><span class="checkmark"></span>
+              </div>
+            </div>
+          </div>
+          <div class="item rightPannel_page">
+            <div class="rightPannel_page_inner"></div>
+            <div class="rightPannel_page_description"><span class="rightPannel_page_pageTypeNo">2 of 3</span>
+              <div class="check_container">
+                <input type="checkbox"><span class="checkmark"></span>
+              </div>
+            </div>
+          </div>
+          <div class="item rightPannel_page">
+            <div class="rightPannel_page_inner"></div>
+            <div class="rightPannel_page_description"><span class="rightPannel_page_pageTypeNo">3 of 3</span>
+              <div class="check_container">
+                <input type="checkbox"><span class="checkmark"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightPannel_topic accordion">Change Device</div>
+      <div class="panel">
+        <div class="bottom_sp_border">
+          <div class="rightPannel_devices">
+            <div class="rightPannel_devices_item">
+              <svg class="responsive_device" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+                <g>
+                  <path class="active-path" d="M25.302,0H9.698c-1.3,0-2.364,1.063-2.364,2.364v30.271C7.334,33.936,8.398,35,9.698,35h15.604   c1.3,0,2.364-1.062,2.364-2.364V2.364C27.666,1.063,26.602,0,25.302,0z M15.004,1.704h4.992c0.158,0,0.286,0.128,0.286,0.287   c0,0.158-0.128,0.286-0.286,0.286h-4.992c-0.158,0-0.286-0.128-0.286-0.286C14.718,1.832,14.846,1.704,15.004,1.704z M17.5,33.818   c-0.653,0-1.182-0.529-1.182-1.183s0.529-1.182,1.182-1.182s1.182,0.528,1.182,1.182S18.153,33.818,17.5,33.818z M26.021,30.625   H8.979V3.749h17.042V30.625z" fill="#A7B0B4"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="rightPannel_devices_item">
+              <svg class="responsive_device" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 401.991 401.991" style="enable-background:new 0 0 401.991 401.991;" xml:space="preserve">
+                <g>
+                  <path class="active-path" d="M352.029,13.418C343.077,4.471,332.332,0,319.766,0H82.223C69.66,0,58.906,4.471,49.959,13.418   c-8.945,8.949-13.418,19.7-13.418,32.264v310.633c0,12.566,4.473,23.309,13.418,32.261c8.947,8.949,19.701,13.415,32.264,13.415   h237.542c12.566,0,23.312-4.466,32.264-13.415c8.946-8.952,13.422-19.701,13.422-32.261V45.683   C365.451,33.118,360.965,22.364,352.029,13.418z M213.843,378.299c-3.613,3.614-7.898,5.421-12.849,5.421   c-4.952,0-9.233-1.807-12.85-5.421c-3.617-3.62-5.424-7.904-5.424-12.847c0-4.948,1.807-9.239,5.424-12.847   c3.621-3.62,7.902-5.434,12.85-5.434c4.95,0,9.235,1.813,12.849,5.434c3.614,3.607,5.428,7.898,5.428,12.847   C219.271,370.395,217.457,374.676,213.843,378.299z M328.902,319.767c0,2.478-0.91,4.613-2.71,6.427   c-1.813,1.814-3.949,2.711-6.427,2.711H82.223c-2.474,0-4.615-0.904-6.423-2.711s-2.712-3.949-2.712-6.427V45.683   c0-2.475,0.903-4.617,2.712-6.424c1.809-1.809,3.949-2.712,6.423-2.712h237.542c2.478,0,4.613,0.9,6.427,2.712   c1.807,1.807,2.71,3.949,2.71,6.424V319.767z" fill="#A7B0B4"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="rightPannel_devices_item">
+              <svg class="responsive_device" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 388.2 388.201" style="enable-background:new 0 0 388.2 388.201;" xml:space="preserve">
+                <g>
+                  <path class="active-path" d="M381.299,209.457c-0.578-2.01-1.785-3.783-3.442-5.062c-14.076-10.851-28.529-16.818-42.853-18.164     c0,0-1.908-0.307-6.504-0.307c-4.598,0-6.941,0.299-6.941,0.299c-13.812,1.629-27.643,7.711-41.215,18.172     c-1.658,1.277-2.864,3.053-3.442,5.062c-6.662,23.091-8.439,45.242-5.597,69.711c2.513,21.63,8.472,43.341,15.425,67.442     c0.579,2.011,1.786,3.785,3.442,5.062c10.658,8.217,24.482,12.739,38.926,12.739c14.444,0,28.271-4.522,38.929-12.737     c1.657-1.277,2.864-3.054,3.444-5.063c6.953-24.104,12.912-45.812,15.425-67.441     C389.738,254.699,387.961,232.546,381.299,209.457z M337.701,249.556c0,4.751-3.853,8.602-8.603,8.602s-8.6-3.851-8.6-8.602     v-35.875c0-4.75,3.85-8.603,8.6-8.603s8.603,3.853,8.603,8.603V249.556z" fill="#A7B0B4"></path>
+                  <path class="active-path" d="M263.645,341.357h-15.51l-12.8-43.521h26.126c-0.816-4.665-1.514-9.327-2.059-14.008     c-1.648-14.195-1.847-27.68-0.576-40.992H30V50.857h310v123.237c10.1,1.013,20.131,3.962,30,8.795V35.857c0-8.284-6.717-15-15-15     H15c-8.284,0-15,6.716-15,15v246.979c0,8.285,6.716,15,15,15h119.664l-12.799,43.521h-15.508c-3.938,0-7.131,3.192-7.131,7.13     v11.726c0,3.938,3.193,7.131,7.131,7.131h157.288c3.938,0,7.13-3.192,7.13-7.131v-11.726     C270.773,344.549,267.582,341.357,263.645,341.357z" fill="#A7B0B4"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="rightPannel_devices_item">
+              <svg class="responsive_device" xmlns="http://www.w3.org/2000/svg" viewBox="0 -25 512 512" width="512px" height="512px">
+                <g>
+                  <path class="active-path" d="m321.84375 394.136719h-131.6875v37.433593h-126.019531v30h383.726562v-30h-126.019531zm0 0" fill="#A7B0B4"></path>
+                  <path class="active-path" d="m185.78125 193.804688v-55.816407l-34.875 55.816407zm0 0" fill="#A7B0B4"></path>
+                  <path class="active-path" d="m0 0v364.136719h512v-364.136719zm237.09375 223.804688h-21.3125v44.617187h-30v-44.617187h-69.269531v-31.5625l60.3125-96.53125h38.957031v98.09375h21.316406v30zm150.890625 30.605468-26.683594 13.714844-36.511719-71.058594h-20.773437v71.355469h-30v-172.710937h30v71.355468h20.773437l36.511719-71.054687 26.683594 13.710937-37.175781 72.34375zm0 0" fill="#A7B0B4"></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightPannel_topic accordion">Change View</div>
+      <div class="panel">
+        <div class="box_center">
+          <div class="box_horizontal">
+            <svg class="verticalPhone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+              <g>
+                <path class="active-path" d="M46.875,4.854H3.125C1.402,4.854,0,6.254,0,7.979v28.125c0,1.725,1.402,3.125,3.125,3.125h17.911    c-0.681-1.193-1.517-2.729-2.557-4.688H4.688v-25h40.625v25h-2.062v3.373c0,0.107-0.015,0.609-0.128,1.313h3.752    c1.723,0,3.125-1.401,3.125-3.125V7.979C50,6.254,48.598,4.854,46.875,4.854z M47.641,23.604c-0.865,0-1.562-0.699-1.562-1.562    c0-0.863,0.697-1.563,1.562-1.563c0.861,0,1.562,0.701,1.562,1.563S48.502,23.604,47.641,23.604z" fill="#A7B0B4"></path>
+                <path class="active-path" d="M39.052,22.406h-0.176c-1.024,0-1.858,0.832-1.858,1.854v1.658H36.79V24.26c0-1.023-0.836-1.854-1.856-1.854h-0.182    c-1.021,0-1.854,0.832-1.854,1.854v1.658h-0.23V24.26c0-1.023-0.834-1.854-1.854-1.854h-0.184c-1.02,0-1.854,0.832-1.854,1.854    v1.658h-0.121V15.324c0-1.029-0.833-1.866-1.866-1.866l-0.181-0.001c-1.027,0-1.863,0.837-1.863,1.867v16.209    c-0.498-0.562-0.936-1.135-1.337-1.652c-0.892-1.154-1.593-2.068-2.385-2.25c-0.879-0.209-1.691,0.084-2.082,0.718    c-0.367,0.603-0.311,1.433,0.153,2.333c1.016,1.943,5.897,10.479,5.9,10.479c0.386,0.934,2.089,3.986,7.823,3.986v-0.204    l0.006,0.204c4.17,0,6.145-1.968,7.068-3.618c0.996-1.782,1.012-3.538,1.012-3.614V24.26    C40.907,23.236,40.07,22.406,39.052,22.406z" fill="#A7B0B4"></path>
+              </g>
+            </svg>
+          </div>
+          <div class="switch">
+            <input class="cmn-toggle cmn-toggle-round" id="cmn-toggle-1" type="checkbox" checked="">
+            <label for="cmn-toggle-1"></label>
+          </div>
+          <div class="box_vertical">
+            <svg class="horizontalPhone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 70.07 70.07" style="enable-background:new 0 0 70.07 70.07;" xml:space="preserve">
+              <g>
+                <path class="active-path" d="M65.094,32.195h-6.982h-0.934c-2.064,0-3.738,1.674-3.738,3.745v0.406c0,2.073,1.674,3.748,3.741,3.748h6.989h0.924    c2.068,0,3.747-1.682,3.747-3.748l-0.004-0.411C68.841,33.869,67.162,32.195,65.094,32.195z" data-original="#000000" data-old_color="#000000" fill="#A7B0B4"></path>
+                <path class="active-path" d="M65.098,22.852h-1.649V4.734c0-2.604-2.13-4.734-4.735-4.734H27.475c-2.604,0-4.734,2.131-4.734,4.734v12.999    c-6.301,3.562-12.8,7.283-12.814,7.292C6.399,26.477,1.23,31.162,1.23,42.225c0,0.988,0.065,1.9,0.156,2.781    c0.029,0.258,0.061,0.506,0.096,0.755c0.091,0.647,0.205,1.266,0.341,1.854c0.049,0.21,0.087,0.429,0.14,0.63    c0.183,0.68,0.395,1.318,0.633,1.925c0.12,0.301,0.25,0.575,0.381,0.857c0.14,0.297,0.281,0.589,0.432,0.862    c0.175,0.329,0.35,0.646,0.542,0.947c0.046,0.07,0.096,0.134,0.143,0.205c4.556,6.887,12.961,6.918,12.961,6.918h5.686v5.379    c0,2.601,2.13,4.731,4.734,4.731h31.238c2.605,0,4.735-2.131,4.735-4.731v-6.561h0.722v-0.004h0.921    c2.071,0,3.75-1.675,3.746-3.746l0.004-0.408c-0.004-2.068-1.679-3.738-3.747-3.738H64.17h-6.059h-0.934    c-2.068,0-3.738,1.674-3.738,3.741v0.415c0,2.062,1.674,3.743,3.741,3.743h2.974v2.534h-34.12V27.323    c1.714-1.087,3.301-2.133,4.206-2.834c4.585-3.546,8.937-6.37,9.526-8.931c0.767-3.323-1.784-6.123-6.209-3.824    c-1.394,0.724-4.255,2.311-7.523,4.146V7.502l34.12,0.005V22.85h-2.043v0.004h-0.929c-2.069,0-3.748,1.674-3.748,3.747v0.406    c0,2.072,1.679,3.742,3.743,3.742h0.929h6.059h0.931c2.066,0,3.741-1.674,3.741-3.742V26.59    C68.841,24.531,67.167,22.852,65.098,22.852z M43.09,62.976c1.312,0,2.37,1.059,2.37,2.368c0,1.312-1.059,2.367-2.37,2.367    c-1.307,0-2.363-1.058-2.363-2.367C40.729,64.039,41.788,62.976,43.09,62.976z M48.093,4.558h-9.996    c-0.314,0-0.574-0.255-0.574-0.57c0-0.32,0.26-0.575,0.574-0.575h9.996c0.314,0,0.57,0.254,0.57,0.575    C48.663,4.302,48.407,4.558,48.093,4.558z" fill="#A7B0B4"></path>
+                <path class="active-path" d="M65.094,41.538H64.17h-6.992c-2.064,0-3.743,1.679-3.743,3.746v0.41c0,2.069,1.675,3.743,3.743,3.743h0.929h6.059h0.926    c2.071,0,3.741-1.674,3.746-3.743v-0.41C68.837,43.217,67.167,41.538,65.094,41.538z" fill="#A7B0B4"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="rightPannel_topic accordion">Change Dimensions</div>
+      <div class="panel"></div>
     </div>
     <script src="assets/js/interact.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/actions.js"></script>
     <script src="assets/js/app.js"></script>
   </body>

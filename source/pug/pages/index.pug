@@ -3,28 +3,86 @@ html(lang='en')
   head
     include ../globals/head.pug
   body
-
     .wrapper
       .card
-        #drag-1.draggable
-          | Sachin
-    .deviceBar
-    .toolbar
+        .resize-drag(data-x=0 data-y=0)
+          | Dammed
+
+
+    //- .deviceBar
+    .toolbar.tooltip
       .toolbar_item
         .toolbar_item_icon.box
       .toolbar_item
         .toolbar_item_icon.roundedCornerBox
       .toolbar_item
         .toolbar_item_icon.circle
-      .toolbar_item
+      .toolbar_item.tooltip
         include ../svg/text.pug
-      .toolbar_item
+        .tooltiptext
+          | Page&nbsp;Settings
+      .toolbar_item.tooltip
         include ../svg/page.pug
+        .tooltiptext
+          | Page&nbsp;Settings
     .rightPannel
-      .rightPannel_item
-        | Dimensions
-
+      .rightPannel_mainTopic
+        | Page Settings
+      .rightPannel_topic.accordion.top_sp_border
+        | Page Setup
+      .panel
+        .owl-carousel.owl-theme.bottom_sp_border
+          .item.rightPannel_page
+            .rightPannel_page_inner
+            .rightPannel_page_description
+              span.rightPannel_page_pageTypeNo 1 of 3
+              .check_container
+                input(type='checkbox', checked='checked')
+                span.checkmark
+          .item.rightPannel_page
+            .rightPannel_page_inner
+            .rightPannel_page_description
+              span.rightPannel_page_pageTypeNo 2 of 3
+              .check_container
+                input(type='checkbox')
+                span.checkmark
+          .item.rightPannel_page
+            .rightPannel_page_inner
+            .rightPannel_page_description
+              span.rightPannel_page_pageTypeNo 3 of 3
+              .check_container
+                input(type='checkbox')
+                span.checkmark
+      .rightPannel_topic.accordion
+        | Change Device
+      .panel
+        .bottom_sp_border
+          .rightPannel_devices
+            .rightPannel_devices_item
+              include ../svg/responsive_phone.pug
+            .rightPannel_devices_item
+              include ../svg/responsive_tablet.pug
+            .rightPannel_devices_item
+              include ../svg/responsive_pc.pug
+            .rightPannel_devices_item
+              include ../svg/responsive_4k.pug
+      .rightPannel_topic.accordion
+        | Change View
+      .panel
+        .box_center
+          .box_horizontal
+            include ../svg/vertical.pug
+          .switch
+            input#cmn-toggle-1.cmn-toggle.cmn-toggle-round(type='checkbox', checked='')
+            label(for="cmn-toggle-1")
+          .box_vertical
+            include ../svg/horizontal.pug
+      .rightPannel_topic.accordion
+        | Change Dimensions
+      .panel
     //- css
     script(src='assets/js/interact.min.js')
+
+    script(src='assets/js/owl.carousel.min.js')
     script(src='assets/js/actions.js')
     script(src='assets/js/app.js')

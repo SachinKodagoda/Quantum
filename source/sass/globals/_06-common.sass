@@ -1,49 +1,96 @@
 .wrapper
-    max-width: $xxxlarge-min
-    margin: 0 auto
+    position: relative
     top: 20px
     left: 50px
-    width: calc(100% - $toolbar-width)
-    background-color: #969FA5
+    width: calc(100% - 250px)
+    height: calc(100vh - 20px)
+    padding: 20px
+    background-color: $mainBackGround
+
 
 .card
-    min-height: 100vh
-    width: 95%
-    margin: 16px auto
-    padding: 16px
-    // background: #fff
+    position: relative
     background-color: rgba(255,255,255,.05)
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+    box-shadow: $commonInnerBoxShadow_card
     border-radius: 5px
-    +LARGE
-        width: 80%
-
-.draggable
-    touch-action: none
-    user-select: none
-    width: 50px
-    height: 50px
-
-#drag-1
-    width: 25%
-    min-height: 6.5em
-    margin: 10%
-    background-color: #29e
-    color: white
-    border-radius: 0.75em
-    padding: 4%
-    touch-action: none
-    user-select: none
-    transform: translate(0px, 0px)
+    height: 100%
 
 .deviceBar
     position: fixed
     top: 0
     left: 50px
-    // background-color: #303030
     background-color: #212527
-    box-shadow: inset -1px 0 1px 0 rgba(0,0,0,.5)
-    border-bottom: 1px solid #000
+    // box-shadow: inset -1px 0 1px 0 rgba(0,0,0,.5)
+    box-shadow: $commonInnerBoxShadow
+    border-bottom: $RightPanel-CommonBorder
     height: 20px
     z-index: 10
     width: 100%
+
+::-webkit-scrollbar
+    width: 10px
+
+
+::-webkit-scrollbar-track
+    background: #303030
+    border-width: 0 0 1px
+    border-left: $RightPanel-CommonBorder
+    box-shadow: $commonInnerBoxShadow
+
+::-webkit-scrollbar-thumb
+    background: #51595E
+    box-shadow: inset 0 1px 0 0 hsla(0,0%,100%,.1), 0 1px 1px 0 rgba(0,0,0,.1)
+    border: 1px solid #1b1b1b
+    border-radius: 8px
+    opacity: .45
+    &:hover
+        background: linear-gradient(#879399,#7a858a)
+
+// Tool tips---------------------------------
+.tooltip
+    position: relative
+
+.tooltip > .tooltiptext
+    visibility: hidden
+    background-color: $toolTip-Background
+    color: $toolTip-Font
+    box-shadow: $toolTip-Boxshadow
+    text-align: center
+    border-radius: 4px
+    font-size: 14px
+    padding: 5px 10px
+    position: absolute
+    z-index: 11
+    top: 50%
+    left: 120%
+    z-index: 20
+    transform: translateY(-50%)
+
+.tooltip:hover > .tooltiptext
+    visibility: visible
+
+.tooltip > .tooltiptext::after
+    content: ""
+    position: absolute
+    top: 50%
+    left: -10px
+    transform: translateY(-50%)
+    border-width: 6px
+    border-style: solid
+    border-color: transparent $toolTip-Background transparent transparent
+
+
+
+
+
+.resize-drag
+    background-color: #29e
+    color: white
+    font-size: 20px
+    border-radius: 8px
+    padding: 20px
+    width: 120px
+
+.resize-container
+    width: 100%
+    height: 240px
